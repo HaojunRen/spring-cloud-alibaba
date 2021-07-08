@@ -1,11 +1,11 @@
 dubbo:
+  cloud:
+    subscribed-services: ${spring.application.name}
   scan:
     base-packages: com.alibaba.cloud.dubbo.bootstrap
   protocol:
     name: dubbo
     port: -1
-  registry:
-    address: spring-cloud://localhost
 
 spring:
   application:

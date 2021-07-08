@@ -1,8 +1,9 @@
 dubbo:
-  registry:
-    address: spring-cloud://localhost
   cloud:
     subscribed-services: spring-cloud-alibaba-dubbo-server
+  protocols:
+    dubbo:
+      port: -1
 
 spring:
   application:
@@ -12,4 +13,10 @@ spring:
   cloud:
     nacos:
       discovery:
+        username: nacos
+        password: nacos
         server-addr: 127.0.0.1:8848
+        namespace: public
+
+server:
+  port: 8080
